@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBookingApp", "CarBookingApp\CarBookingApp.csproj", "{631634C9-944A-4BCA-93CC-D8FEE2A8A96E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarBookingApp", "CarBookingApp\CarBookingApp.csproj", "{631634C9-944A-4BCA-93CC-D8FEE2A8A96E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBookingApp.Data", "CarBookingApp.Data\CarBookingApp.Data.csproj", "{0555A674-E9EE-4A88-848B-3F8A638CAF15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{631634C9-944A-4BCA-93CC-D8FEE2A8A96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{631634C9-944A-4BCA-93CC-D8FEE2A8A96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{631634C9-944A-4BCA-93CC-D8FEE2A8A96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0555A674-E9EE-4A88-848B-3F8A638CAF15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0555A674-E9EE-4A88-848B-3F8A638CAF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0555A674-E9EE-4A88-848B-3F8A638CAF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0555A674-E9EE-4A88-848B-3F8A638CAF15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,3 +1,6 @@
+using CarBookingApp.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +8,10 @@ builder.Services.AddRazorPages();
 
 IConfiguration Configuration = builder.Configuration;
 
+// Add connection to Database
+var connectionString = Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<CarBookingAppDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
