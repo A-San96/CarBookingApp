@@ -13,9 +13,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Cars[0].Year)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Cars[0].Name)
             </th>
@@ -25,9 +25,9 @@
     <tbody>
 @foreach (var item in Model.Cars) {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Year)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
