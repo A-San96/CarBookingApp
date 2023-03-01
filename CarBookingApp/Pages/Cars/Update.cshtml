@@ -25,14 +25,15 @@
                 <span asp-validation-for="Car.Year" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-warning btn-block" />
+                <button type="submit" class="btn btn-warning btn-block">
+                    <i class="fa-solid fa-floppy-disk"></i> Save</button>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a class="btn btn-outline-primary mt-2" asp-page="./Index"><i class="fa-solid fa-arrow-left"></i> Back to List</a>
 </div>
 
 @section Scripts {

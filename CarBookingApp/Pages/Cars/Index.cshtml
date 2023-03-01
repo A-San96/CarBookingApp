@@ -8,7 +8,7 @@
 <h1>List Of Cars</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a class="btn btn-primary" asp-page="Create"><i class="fa-solid fa-plus"></i>&nbsp; Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -32,16 +32,44 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                <a class="btn  btn-warning" asp-page="./Update" asp-route-id="@item.Id">Edit</a> |
-                <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <form asp-page-handler="delete" asp-route-carid="@item.Id" method="post" class="form-inline">
-                    <button class="btn btn-danger"
-                        onclick="return confirm('Are you sure you wan to delete this record?')"
-                        >Delete</button>
-                </form>
+                <a class="btn  btn-warning" asp-page="./Update" asp-route-id="@item.Id">
+                    <i class="fa-regular fa-pen-to-square"></i> Edit</a> |
+                <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id">
+                    <i class="fa-regular fa-eye"></i> Details</a> |
+                <button class="btn btn-danger deleteBtn" data-id="@item.Id">
+                    <i class="fa-regular fa-trash-can"></i> Delete
+                </button>
                 @*<a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>*@
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<form id="deleteForm" asp-page-handler="delete" method="post" class="form-inline">
+    <input type="hidden" name="carid" id="carid" />
+</form>
+
+@section Scripts{
+    <script>
+        $(function () {
+            
+            $('.deleteBtn').click(function (e) {
+                swal({
+                    title: "Are you sure?",
+                    text: "Are you sure you wan to delete this record?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true
+                }).then((confirm) => { 
+                    if(confirm) {
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $("#carid").val(id);
+                        $("#deleteForm").submit();
+                    }
+                });
+            })
+        });
+    </script>
+}
