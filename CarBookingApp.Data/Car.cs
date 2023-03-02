@@ -10,9 +10,17 @@ namespace CarBookingApp.Data
     public class Car
     {
         public int Id { get; set; }
-        public int Year { get; set; }
+
         [Required]
-        [StringLength(150, ErrorMessage = "Name is too long")]
-        public string Name { get; set; }
+        [Range(1990, 2023)]
+        public int Year { get; set; }
+
+        [Required]
+        [StringLength(150, ErrorMessage = "Model is too long")]
+        public string Model { get; set; }
+
+
+        public int? MakeId { get; set; }
+        public virtual Make Make { get; set; }
     }
 }

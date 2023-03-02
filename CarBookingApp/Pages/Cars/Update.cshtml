@@ -14,11 +14,11 @@
         <form method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             <input type="hidden" asp-for="Car.Id" />
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Car.Name" class="control-label"></label>
                 <input asp-for="Car.Name" class="form-control" />
                 <span asp-validation-for="Car.Name" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="Car.Year" class="control-label"></label>
                 <input asp-for="Car.Year" class="form-control" />
